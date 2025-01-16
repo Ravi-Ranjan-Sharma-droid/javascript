@@ -18,7 +18,7 @@ const bigNumber = 132498796534524313462n
 
 
 
-// Reference (not primitive)
+// Reference (not primitive) <----------------------->
 
 // Array, Objects, Functions
 
@@ -33,3 +33,27 @@ const myFunction = function(){
 }
 
 console.log(typeof bigNumber);
+
+//*************************************************************************************************
+// Stack (primitive), Heap (non-primitive)
+
+let myEmailId = "rr2436310@gmail.com"
+
+let anotherEmailId = myEmailId
+ anotherEmailId = "doreamon9919@gmail.com"
+
+
+console.log(myEmailId);
+console.log(anotherEmailId);
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+let userTwo = userOne
+
+userOne.email = "ravi@google.com"
+userTwo.email = "snorlax@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
