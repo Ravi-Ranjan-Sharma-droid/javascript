@@ -29,6 +29,7 @@ console.log(url.replace("google", "github"));
 console.log(url.includes("google"));
 console.log(url.includes("github"));
 
-console.log(gameName.split("-"))
+console.log(gameName.split("-"));
+
 
 
