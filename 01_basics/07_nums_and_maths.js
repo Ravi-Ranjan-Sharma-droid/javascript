@@ -1,4 +1,4 @@
-/*
+
 const score = 400 
 console.log(score);
 const balance = new Number(100)
@@ -13,7 +13,7 @@ console.log(otherNumber.toPrecision(5)); // used to find the precision of the nu
 const Hundred = 100000000
 console.log(Hundred.toLocaleString("en-in")); // used to convert the number to locale string.
 
-*/
+
 // **********************************************Maths*************************************************************
 
 console.log(Math);
