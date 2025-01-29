@@ -1,4 +1,4 @@
-/*
+
 //************Array*************
 // An array is a special variable, which can hold more than one value at a time.
 // If you have a list of items (a list of car names, for example), storing the cars in single variables could look like this:
@@ -25,7 +25,7 @@ const newarray = Myarray.join() // convert array to string
 
 console.log(Myarray);
 console.log(newarray);
-*/
+
 
 //************Slice, Splice*************
 const Testarray = [1, 2, 3, 4, 5, 6];
