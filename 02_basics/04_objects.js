@@ -56,3 +56,36 @@ console.log(Object.entries(instagramUser)); // return all keys and values
 
 console.log(instagramUser.hasOwnProperty("name")); // return true or false
 console.log(instagramUser.hasOwnProperty("log")); // return true or false
+
+
+const course = {
+    courseName: "JavaScript",
+    prise: "599",
+    courseInstructor: "Snorlax",
+    courseDuration: "6 months",
+}
+
+// console.log(course.courseInstructor);
+
+// const {courseInstructor} = course
+// console.log(courseInstructor);
+
+const {courseInstructor: inst} = course
+console.log(inst);
+
+// const navbar= ({company}) =>
+// { }
+// navbar(company = "Snorlax");
+
+// {
+//     name: "Ravi",
+//     courseName: "JavaScript",
+//     prise: "free",
+// }
+
+
+[
+    {},
+    {},
+    {},
+]
