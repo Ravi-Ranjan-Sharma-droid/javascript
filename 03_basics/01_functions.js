@@ -1,3 +1,4 @@
+
 function first() {
     console.log("R");
     console.log("A");
@@ -50,3 +51,33 @@ console.log(loginUserMessage("Ravi Ranjan"))
 console.log(loginUserMessage(""))
 console.log(loginUserMessage())
 
+
+function calculateCartPrice(val1, val2, ...nub1){
+    return nub1
+}
+
+console.log(calculateCartPrice(150, 67567, 200, 400))
+
+const user = {
+    username: "Ravi Ranjan",
+    price: 199
+}
+
+function handleobject(anyobject){
+    console.log(`username is ${anyobject.username} and price is ${anyobject.price}`);
+}
+
+handleobject(user);
+handleobject({
+    username: "Snorlax",
+    price: "free"
+});
+
+const myNewArray = [300, 700, 500, 400]
+
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+
+console.log(returnSecondValue(myNewArray)); 
+//console.log(returnSecondValue([300, 400, 700, 400]));
