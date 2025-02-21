@@ -9,11 +9,11 @@ switch (key) {
 }
 */
 
-const month = 3;
+const month = 4;
 
 switch (month) {
     case 1:
-        console.log("january");
+        console.log("January");
         
         break;
     case 2:
@@ -21,10 +21,16 @@ switch (month) {
         
         break;
     case 3:
-        console.log("");
+        console.log("March");
+        
+        break;
+    case 4:
+        console.log("April");
         
         break;
 
     default:
+        console.log("error!");
+        
         break;
 }
