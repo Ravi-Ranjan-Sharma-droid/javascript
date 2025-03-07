@@ -1,6 +1,6 @@
-let value = 3 
-let negValue = -value
-console.log(negValue);
+let no = 13 
+let negValue = -no
+console.log(negValue);  // -13
 
 //console.log(2+2);
 //console.log(2-2);
@@ -9,11 +9,11 @@ console.log(negValue);
 //console.log(2/3);
 //console.log(2%3);
 
-let str1 = "Hello"
-let str2 = " Ravi"
+let str1 = "Hello, "
+let str2 = "Ravi"
 
 let str3 = str1 + str2
-console.log(str3);
+console.log(str3);        // hello, Ravi
 
 console.log("1" + 2)      // output 12
 console.log(1 + "2")      // output 12
@@ -30,7 +30,9 @@ console.log(+""); // output 0    not in use
 
 let num1, num2, num3 
 
-num1 = num2 = num3 = 2 + 2
+num1 = num2 = num3 = 2 + 26
+console.log(num1);    // 4
+
 
 let gameCounter = 100
 ++gameCounter;
