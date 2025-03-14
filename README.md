@@ -2,13 +2,13 @@
 
 Welcome to the **JavaScript** repository! 🚀 This repository contains various JavaScript projects, examples, and learning materials to help you master JavaScript.
 
-## 📌 Table of Contents
+<!-- ## 📌 Table of Contents
 - [About](#about)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Projects](#projects)
 - [Contributing](#contributing)
-- [License](#license)
+- [License](#license) -->
 
 ## 📖 About
 This repository is a collection of JavaScript programs ranging from beginner-friendly scripts to advanced concepts. It is designed for learning, practice, and experimentation with JavaScript.
