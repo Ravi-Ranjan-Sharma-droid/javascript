@@ -1,20 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>DOM Learning</title>
+    <style>
+        body {
+            background: #000;
+            color: rgb(250, 250, 250);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .parent {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .day {
+            margin: 5px 0;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="bg-black">
-        <h1 class="heading">
-           <!-- put it in browser console -->
-            <!-- console.log(window) -->
-            <!-- console.log(window.document) -->
-            <!-- console.log(document) -->
-            <!-- console.dir(document) -->
-            <p>Lorem, ipsum dolor.</p>
-        </h1>
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+        <div class="day">Saturday</div>
+        <div class="day">Sunday</div>
     </div>
 </body>
+<script>
+
+    const parent = document.querySelector('.parent')
+    // console.log(parent);
+    // console.log(parent.children)
+    // console.log(parent.children[1].innerHTML)
+
+    //    for (let c = 0; c < parent.children.length; c++) {
+    //     console.log(parent.children[c].innerHTML)
+    //    }
+
+    parent.children[2].style.color = 'gold'
+    //    console.log(parent.firstElementChild);
+    //    console.log(parent.lastElementChild);
+    const DayOne = document.querySelector('.day')
+    console.log(DayOne);
+    console.log(DayOne.parentElement);
+    console.log(DayOne.nextElementSibling);
+    console.log("NODES: ", parent.childNodes)
+
+</script>
+
 </html>
