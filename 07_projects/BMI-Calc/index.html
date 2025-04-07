@@ -105,9 +105,15 @@
         }else{
             const bmi = (weight / ((height * height) / 10000)).toFixed(2);
             results.innerHTML = `<span>Your BMI is ${bmi}</span>`
+            if(bmi < 18.6){
+                results.innerHTML = `<span>Your BMI is ${bmi} <br> oops your Under Weight💀</span>`
+            }else if(bmi >= 18.9 &&  bmi <= 24.9){
+                results.innerHTML = `<span>Your BMI is perfect ${bmi}</span>`
 
+            }else if(bmi > 24.9){
+                results.innerHTML = `<span>Your BMI is ${bmi}. <br> You're overweight — time to work out!</span>`
+            }
         }
-        
     })
 </script>
 </html>
