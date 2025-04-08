@@ -1,0 +1,156 @@
+/* Global Reset and Fonts */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #2e2e2e;
+}
+
+/* Border Animation Wrapper */
+.border-anim-wrapper {
+  position: relative;
+  padding: 2px; /* border thickness */
+  border-radius: 14px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.border-anim-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    #ffffff,
+    #ffffff,
+    #838282,
+    #ffffff,
+    #555555
+  );
+  animation: borderChase 6s ease-in-out infinite;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+@keyframes borderChase {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Game Container */
+#wrapper {
+  background-color: #ffffff;
+  padding: 32px;
+  max-width: 420px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+/* Heading & Text */
+h1 {
+  font-size: 1.75rem;
+  margin-bottom: 12px;
+  color: #1c1c1c;
+}
+
+.instructions {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+/* Form Styling */
+.form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.guessField {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.guessField:focus {
+  border-color: #999;
+  outline: none;
+}
+
+.guessSubmit {
+  width: 100%;
+  padding: 10px;
+  background-color: #2e2e2e;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.guessSubmit:hover {
+  background-color: #444;
+}
+
+/* Result Area */
+.resultParas {
+  margin-top: 24px;
+}
+
+.resultParas p {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.lastResult {
+  font-weight: bold;
+  color: #333;
+}
+
+.lowOrHi {
+  margin-top: 10px;
+  font-style: italic;
+  color: #666;
+}
+#guess {
+  font-size: x-large;
+}
