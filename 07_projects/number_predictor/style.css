@@ -39,7 +39,7 @@ body {
     #ffffff,
     #555555
   );
-  animation: borderChase 6s ease-in-out infinite;
+  animation: borderChase 20s ease-in-out infinite;
   z-index: -1;
   border-radius: 50%;
 }
