@@ -1,67 +1,72 @@
-const randNum = parseInt(Math.random() * 100 + 1) // Random number generate 
-const submit = document.querySelector("#Submit"); // Button thats clicked by user
-const UserInput = document.querySelector("#guessField"); // Display
-const remaining = document.querySelector(".lastResult"); // Guesses Remaining
-const LastGuess = document.querySelector(".guesses"); // Previous Guesses 
-const LowHigh = document.querySelector(".lowOrHi"); // Hint
-const StartOver = document.querySelector(".resultParas");
-const p = document.createElement('p')
-console.log(randNum);
+const RandNum = parseInt(Math.random() * 100 + 1);
+const submit = document.querySelector("#subt");
+const userInput = document.querySelector("#guessField");
+const guessSlot = document.querySelector(".guesses");
+const remaining = document.querySelector(".lastResult");
+const LorH = document.querySelector(".lowOrHi");
+const startOver = document.querySelector(".resultParas");
 
-let previousGuess = [];
-let NumGuess = 1;
+const p = document.createElement("p");
 
-let playGame = true
+console.log(RandNum);
+
+let prevGuess = [];
+let numGuess = 1;
+
+let playGame = true;
 
 if (playGame) {
     submit.addEventListener('click', function (e) {
-        e.preventDefault();
-        const guess = parseInt(UserInput.value)
-        ValidGuess(guess)        
+        e.preventDefault()
+        const guess = parseInt(userInput.value)
+        validateGuess(guess)
     })
- }
+}
 
-function ValidGuess(guess) {
-    // This function check if user put valid number
+function validateGuess(guess) {
     if (isNaN(guess)) {
-        alert('Please fill the field')
-    } else if (guess > 100) {
-        alert('Please Enter a number less than 100')
-    } else if (guess < 0) {
-        alert("Number should not be an integer.");
+        alert('Please fill the field below to continue')
     } else if (guess === 0) {
-        alert("Number should not be Zero");
+        alert('zero is not allowed')
+    } else if (guess > 100) {
+        alert('Number must not be greater than 100')
+    } else if (guess < 0) {
+        alert('Number must not be negative (-ve)')
     } else {
-        previousGuess.push(guess)
-        if (NumGuess === 0) {
-            DisplayGuess(guess)
-            DisplayMessage(`Game Over. Random number was ${randNum}`)
-            EndGame()
+        prevGuess.push(guess)
+        if (numGuess === 11) {
+            displayGuess(guess)
+            displayMessage(`Game Over. Random number was ${guess}`)
+            endGame()
         } else {
-            DisplayGuess(guess)
+            displayGuess(guess)
+            checkGuess(guess)
         }
     }
 }
 
-function CheckGuess(guess) {
-    // This function check the guess number high or low for the game result
+function checkGuess(guess) {
+    if (guess === RandNum) {
+        displayMessage(`You guessed it right`);
+        endGame();
+    } else if (guess > RandNum) {
+      displayMessage(`Number is Too high`);
+    } else if (guess < RandNum) {
+      displayMessage(`Number is Too low`);
+    }
 }
 
-function DisplayGuess(guess) {
-    // This function display the UserGuess number
+function displayGuess() {
+    userInput.value = ''
+    guessSlot.innerHTML += `${guess}, `
+    numGuess++;
+    remaining.innerHTML = `${11 - numGuess}`
 }
 
-function DisplayMessage(message){
-    // This function do as following events
-    // --> Empty the last guess no. for next guess if user unable to guess the number.
-    // --> Inner Html updated 
-    // --> number of guess remaining decreases
+function displayMessage(message) {
+    LorH.innerHTML = `<h2>${message}</h2>`
 }
 
-function EndGame() {
-    
-}
+function endGame() {}
 
-function NewGame() {
-    
-}
+function newGame() {}
