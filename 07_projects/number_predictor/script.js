@@ -1,4 +1,5 @@
 let RandNum = parseInt(Math.random() * 100 + 1);
+console.log(RandNum);
 
 const submit = document.querySelector("#subt");
 const userInput = document.querySelector("#guessField");
@@ -36,7 +37,7 @@ function validateGuess(guess) {
     prevGuess.push(guess);
     if (numGuess === 11) {
       displayGuess(guess);
-      displayMessage(`Game Over. Random number was ${RandNum}`);
+      alert(`Game Over. Random number was ${RandNum}`);
       endGame();
     } else {
       displayGuess(guess);
