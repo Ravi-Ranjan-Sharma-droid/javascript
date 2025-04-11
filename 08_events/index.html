@@ -64,8 +64,15 @@
         document.getElementById('laugh').addEventListener('click', function (e) {
             alert("i'm image");
         }, false)
-        document.getElementById('google').addEventListener('click', function (e) {
+        // document.getElementById('google').addEventListener('click', function (g) {
+        //     g.defaultPrevented()
+        //     alert("Opening google...");
+        // }, false)
+        document.getElementById('google').addEventListener('click', function (g) {
+            g.preventDefault()
             alert("Opening google...");
+            alert("Trying to open...");
+            alert("Sorry! Developer has set to preventDefault. ");
         }, false)
 
 
