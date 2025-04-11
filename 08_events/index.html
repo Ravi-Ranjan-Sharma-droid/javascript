@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        body {
+            background: #000;
+            color: #fff;
+        }
+
+        ul li {
+            color: #ffffff;
+            background: #63a0d1;
+            padding: 10px;
+            margin: 5px 0;
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>My image</h2>
+    <div id="box">
+        <ul id="images">
+            <li><img width="100px" id="hand" alt="anime girl with two hand rising in air" src="images/03_sticker.png"
+                    alt=""></li>
+            <li><img width="100px" id="flag" alt="a girl with flag" src="images/23_sticker.png" alt=""></li>
+            <li><img width="100px" id="sward" alt="girl hold a diamond sward" src="images/34_sticker.png" alt=""></li>
+            <li><img width="100px" id="laugh" alt="laughing girl" src="images/41_sticker.png" alt=""></li>
+        </ul>
+    </div>
+    <a id="google" style="color:rgb(255, 255, 255);" href="https://google.com">Don't click here</a>
+    <script>
+        // less features 
+        // document.getElementById('mars').onclick = function(){
+        //     alert('Mars was clicked')
+        // }
+
+        // attachEvent --> use in early time (internet exploder)
+        // JQuery - on
+        //   *****************************
+        // type, timestamp, defaultPrevent
+        // go through -> target, toElement, srcElement, currentTarget 
+        // clientX, clintY, screenX, screenY, keyCode
+        document.getElementById('images').addEventListener('click', function (e) {
+            alert("i'm images container");
+        }, false) // default false eventPropagation |-- eventBubbling,         
+        //                                          |--eventcapaturing
+        document.getElementById('box').addEventListener('click', function (e) {
+            alert("i'm div");
+        }, true) // capturing mode 
+        document.getElementById('hand').addEventListener('click', function (e) {
+            alert("i'm image");
+        }, false)
+        document.getElementById('flag').addEventListener('click', function (e) {
+            alert("i'm image");
+        }, false)
+        document.getElementById('sward').addEventListener('click', function (e) {
+            alert("i'm image");
+        }, false)
+        document.getElementById('laugh').addEventListener('click', function (e) {
+            alert("i'm image");
+        }, false)
+        document.getElementById('google').addEventListener('click', function (e) {
+            alert("Opening google...");
+        }, false)
+
+
+    </script>
+</body>
+
+</html>
