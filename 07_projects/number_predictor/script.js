@@ -93,3 +93,6 @@ function newGame() {
         playGame = true;
     });
 }
+// upgrade add timer
+// add comment 
+// ui improve 
