@@ -5,30 +5,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>theme-Changer</title>
+    <style>
+        body {
+            transition: background-color 0.5s ease;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        button {
+            padding: 12px 34px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 10px;
+        }
+
+        #Start {
+            background: green;
+            color: white;
+        }
+
+        #Stop {
+            background: red;
+            color: white;
+        }
+
+        h1, h3 {
+            margin: 10px 0;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Random Color Changer </h1>
+    <h1>Random Color Generator</h1>
+    <h3></h3>
     <button id="Start">Start</button>
     <button id="Stop">Stop</button>
+    <script>
+        // generate a random hex code for random color
+        const randomColor = function () {
+            const hex = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += hex[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        };
+
+        let Working;
+        const GetStart = function () {
+            if (!Working) {
+                Working = setInterval(() => { bgChange() }, 1000);
+            }
+            function bgChange() {
+                const color = randomColor(); // generate once
+                document.body.style.backgroundColor = color;
+                document.querySelector('h3').innerHTML = `Background color is ${color}`;
+            }
+        };
+
+        const Twist = function () {
+            clearInterval(Working);
+            Working = null;
+            console.log('stopped.');
+        };
+
+        document.getElementById('Start').addEventListener('click', GetStart);
+        document.getElementById('Stop').addEventListener('click', Twist);
+    </script>
 </body>
-<script>
-    // generate a random hax code for random color
-    const randomColor = function () {
-        const hex = '0123456789ABCDEF'
-        let color = '#'
-        for (let i = 0; i < 6; i++) {
-            color += hex[Math.floor(Math.random() * 16)]
-        }
-        return color;
-    };
-
-        const GetStart = function(){}
-        const Twist = function(){}
-
-    console.log(randomColor())
-    document.getElementById('start').addEventListener('click', GetStart)
-    document.getElementById('stop').addEventListener('click', Twist)
-</script>
 
 </html>
