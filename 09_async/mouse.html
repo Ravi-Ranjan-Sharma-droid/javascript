@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body style="color: #ffffff; background: #000;">
+    <h1>hello there!</h1>
+    <button id="srt">Start</button>
+    <button id="stp">Stop</button>
+
+    <script>
+        // Start function
+        document.querySelector('#srt').addEventListener('click', function () {
+           time = setInterval(() => {
+                document.querySelector('h1').innerHTML = Date.now()
+                console.log('Start')
+                
+            }, 1000);
+        })
+
+        // Stop function
+        document.querySelector('#stp').addEventListener
+            ('click', function () {
+                clearInterval(time)
+                console.log('Stopped');
+            })
+
+    </script>
+        <!-- <script>
+            let time = null;
+
+            document.querySelector('#srt').addEventListener('click', function () {
+                if (time === null) {
+                    time = setInterval(() => {
+                        document.querySelector('h1').innerHTML = Date.now();
+                        console.log('Start');
+                    }, 1000);
+                }
+            });
+
+            document.querySelector('#stp').addEventListener('click', function () {
+                clearInterval(time);
+                time = null; // reset so it can start again
+                console.log('Stopped');
+            });
+        </script> -->
+    
+</body>
+
+</html>
