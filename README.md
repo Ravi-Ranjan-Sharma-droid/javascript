@@ -48,8 +48,8 @@ Contributions are welcome! If you want to contribute:
 4. Push the branch (`git push origin feature-branch`)
 5. Open a Pull Request
 
-## 📜 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+<!-- ## 📜 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. -->
 
 
 
